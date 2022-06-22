@@ -6,6 +6,7 @@ let apiKey
 chrome.storage.local.get('key', ({ key }) => apiKey = key)
 
 navigator.mediaDevices.getDisplayMedia({ video: true, audio: true }).then(stream => {
+    if(!apiKey) return alert('You must provide a Deepgram API Key in the options page.')
     if(stream.getAudioTracks().length == 0) return alert('You must share your tab with audio. Refresh the page.')
     const recorder = new MediaRecorder(stream, { mimeType: 'audio/webm' })
 
