@@ -1,0 +1,11 @@
+{
+    "name": "Mic & Tab Transcription",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["storage", "tabs", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": ["*://*/"],
+    "options_page": "options.html"
+}
